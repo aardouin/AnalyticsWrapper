@@ -14,12 +14,22 @@ public class ATInterentAnalytics extends AbstractAnalytics {
 
     private Tracker mTracker;
 
-    public ATInterentAnalytics(Context context, final String siteId) {
+    public static ATInterentAnalytics buildDefaultInstance(Context context, final String siteId) {
         HashMap config = new HashMap<String, Object>(){{
             put("site", siteId);
         }};
+       return  buildWithConfig(context,config);
+    }
+
+    private static ATInterentAnalytics buildWithConfig(Context context, HashMap config) {
+        return new ATInterentAnalytics(context,config);
+    }
+
+    private ATInterentAnalytics(Context context, final HashMap<String,Object> config) {
+        mTracker = new Tracker(context);
         mTracker.setConfig(config,false, null);
     }
+
 
     @Override
     public void tagScreen(String screenName) {
@@ -38,3 +48,4 @@ public class ATInterentAnalytics extends AbstractAnalytics {
         mTracker.Context().setLevel2(0);
     }
 }
+

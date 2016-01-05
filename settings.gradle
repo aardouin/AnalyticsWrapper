@@ -1,1 +1,1 @@
-include ':app', ':core', ':atinternet', ':atinternet'
+include ':app', ':core', ':atinternet'
