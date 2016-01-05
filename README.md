@@ -3,6 +3,9 @@ A multi analytics service wrapper
 
 ##Setup
 
+![Build Status](https://img.shields.io/github/release/aardouin/analytics-wrapper.svg?label=latest%20release
+)
+
 Add `core` dependency, with [latest release](https://github.com/aardouin/analytics-wrapper/releases/latest) version name
 
 ```groovy
