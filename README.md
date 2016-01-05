@@ -19,15 +19,15 @@ compile 'com.github.aardouin.analytics-wrapper:core:$version'
 It is advised to use AnalyticsManager as a singleton inside your application : 
 
 ```java
-private static AnalyticsManager analyticsInstance;
+private static AnalyticsManager analyticsManagerInstance;
 @Override
 public void onCreate() {
     super.onCreate();
-    analyticsInstance = new AnalyticsManager();
+    analyticsManagerInstance = new AnalyticsManager();
 }
 
 public static AnalyticsManager getAnalyticsInstance(){
-    return analyticsInstance;
+    return analyticsManagerInstance;
 }
 ```
 
@@ -41,9 +41,29 @@ compile 'com.github.aardouin.analytics-wrapper:$provider:$version'
 Add provider instance to using : 
 
 ```java
-analyticsInstance.addAnalytics(AbstractAnalytics analytics)
+analyticsManagerInstance.addAnalytics("analyticsName",AbstractAnalytics analytics)
 ```
 
-
-##Provider available
+##Providers available
 [AT Internet](./atinternet/)
+[Google Analytics](./googleanalytics/)
+
+##Simple events tracking
+
+Tracking can be made for every analytics instance available to the manager or for a specific analytics instance : 
+
+i.e : 
+
+```java
+analyticsManagerInstance.trackScreen("screenName");
+
+analyticsManagerInstance.getAnalyticsInstance("specificAnalyticsName")
+						.trackScreen("screenName");
+```
+
+Tracking method available are the following : 
+
+```java
+void trackScreen(String screenName);
+void trackClickEvent(String eventName);
+```

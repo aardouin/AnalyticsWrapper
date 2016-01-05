@@ -7,9 +7,8 @@ import android.content.Context;
  */
 public abstract class AbstractAnalytics {
 
-    public abstract void tagScreen(String screenName);
+    public abstract void trackScreen(String screenName);
 
-    public abstract void tagClick(String clickName);
+    public abstract void trackClickEvent(String eventName);
 
-    public abstract void tagPopup(String popupName);
 }

@@ -32,13 +32,13 @@ public class ATInterentAnalytics extends AbstractAnalytics {
 
 
     @Override
-    public void tagScreen(String screenName) {
+    public void trackScreen(String screenName) {
         mTracker.Screens().add(screenName).sendView();
     }
 
     @Override
-    public void tagClick(String clickName) {
-        mTracker.Gestures().add(clickName).sendTouch();
+    public void trackClickEvent(String eventName) {
+        mTracker.Gestures().add(eventName).sendTouch();
     }
 
     @Override
