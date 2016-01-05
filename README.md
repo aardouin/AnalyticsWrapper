@@ -57,6 +57,7 @@ analyticsManagerInstance.addAnalytics("analyticsName",AbstractAnalytics analytic
 ##Providers available
 * [AT Internet](./atinternet/)
 * [Google Analytics](./googleanalytics/)
+* [Mixpanel](./mixpanel/)
 
 ##Simple events tracking
 
