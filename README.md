@@ -45,8 +45,8 @@ analyticsManagerInstance.addAnalytics("analyticsName",AbstractAnalytics analytic
 ```
 
 ##Providers available
-[AT Internet](./atinternet/)
-[Google Analytics](./googleanalytics/)
+* [AT Internet](./atinternet/)
+* [Google Analytics](./googleanalytics/)
 
 ##Simple events tracking
 
