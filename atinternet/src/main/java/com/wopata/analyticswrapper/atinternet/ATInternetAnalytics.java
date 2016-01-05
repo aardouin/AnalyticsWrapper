@@ -10,22 +10,22 @@ import java.util.HashMap;
 /**
  * Created by ardouin on 04/01/16.
  */
-public class ATInterentAnalytics extends AbstractAnalytics {
+public class ATInternetAnalytics extends AbstractAnalytics {
 
     private Tracker mTracker;
 
-    public static ATInterentAnalytics buildDefaultInstance(Context context, final String siteId) {
+    public static ATInternetAnalytics buildDefaultInstance(Context context, final int siteId) {
         HashMap config = new HashMap<String, Object>(){{
             put("site", siteId);
         }};
        return  buildWithConfig(context,config);
     }
 
-    private static ATInterentAnalytics buildWithConfig(Context context, HashMap config) {
-        return new ATInterentAnalytics(context,config);
+    private static ATInternetAnalytics buildWithConfig(Context context, HashMap config) {
+        return new ATInternetAnalytics(context,config);
     }
 
-    private ATInterentAnalytics(Context context, final HashMap<String,Object> config) {
+    private ATInternetAnalytics(Context context, final HashMap<String,Object> config) {
         mTracker = new Tracker(context);
         mTracker.setConfig(config,false, null);
     }

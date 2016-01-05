@@ -2,7 +2,7 @@ package com.wopata.analyticswrapper.sample_app;
 
 import android.app.Application;
 
-import com.wopata.analyticswrapper.atinternet.ATInterentAnalytics;
+import com.wopata.analyticswrapper.atinternet.ATInternetAnalytics;
 import com.wopata.analyticswrapper.googleanalytics.GAAnalytics;
 import com.wopata.analyticswrapper.library.AnalyticsManager;
 import com.wopata.analyticswrapper.mixpanel.MixpanelAnalytics;
@@ -22,9 +22,9 @@ public class SampleApplication extends Application {
     public void onCreate() {
         super.onCreate();
         analyticsInstance = new AnalyticsManager();
-        analyticsInstance.addAnalytics(ATINTERNET_ANALYTICS,ATInterentAnalytics.buildDefaultInstance(getApplicationContext(),"ATSITE"));
+        analyticsInstance.addAnalytics(ATINTERNET_ANALYTICS, ATInternetAnalytics.buildDefaultInstance(getApplicationContext(),564144));
         analyticsInstance.addAnalytics(GAANALYTICS,new GAAnalytics(getApplicationContext(),R.xml.global_tracker));
-        analyticsInstance.addAnalytics(MIXPANEL,new MixpanelAnalytics(getApplicationContext(),"MIXPANEL_KEY"));
+        analyticsInstance.addAnalytics(MIXPANEL,new MixpanelAnalytics(getApplicationContext(),"4c88aec1223349a5f42e71b6ac1f1692"));
     }
 
     public static AnalyticsManager getAnalyticsInstance(){
