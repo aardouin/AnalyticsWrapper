@@ -3,7 +3,7 @@ A multi analytics service wrapper
 
 ##Setup
 
-Add `core` dependency, current version is `0.1`: 
+Add `core` dependency, with [latest release](https://github.com/aardouin/analytics-wrapper/releases/latest) version name
 
 ```groovy
 repositories {
@@ -54,7 +54,6 @@ analyticsManagerInstance.addAnalytics("analyticsName",AbstractAnalytics analytic
 ##Providers available
 * [AT Internet](./atinternet/)
 * [Google Analytics](./googleanalytics/)
-* [Mixpanel](./mixpanel/)
 
 ##Simple events tracking
 
