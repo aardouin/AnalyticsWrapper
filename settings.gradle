@@ -1,1 +1,1 @@
-include ':app', ':core', ':atinternet', ':googleanalytics'
+include ':app', ':core', ':atinternet', ':googleanalytics', ':mixpanel'

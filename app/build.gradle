@@ -38,5 +38,6 @@ dependencies {
     localCompile project(path: ':core')
     localCompile project(path: ':atinternet')
     localCompile project(path: ':googleanalytics')
-    compile 'com.android.support:design:23.1.1'
+    localCompile project(path: ':mixpanel')
+
 }

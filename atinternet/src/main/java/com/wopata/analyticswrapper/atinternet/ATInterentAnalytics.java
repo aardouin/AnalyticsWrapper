@@ -41,11 +41,5 @@ public class ATInterentAnalytics extends AbstractAnalytics {
         mTracker.Gestures().add(eventName).sendTouch();
     }
 
-    @Override
-    public void tagPopup(String popupName) {
-        mTracker.Context().setLevel2(1);
-        mTracker.Screens().add(popupName).sendView();
-        mTracker.Context().setLevel2(0);
-    }
 }
 

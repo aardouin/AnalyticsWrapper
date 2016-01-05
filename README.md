@@ -12,6 +12,13 @@ repositories {
 compile 'com.github.aardouin.analytics-wrapper:core:$version'
 ```
 
+Make sure you got the right permissions for your app : 
+
+```xml
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+```
+
 
 ##Quick start guide
 
@@ -47,6 +54,7 @@ analyticsManagerInstance.addAnalytics("analyticsName",AbstractAnalytics analytic
 ##Providers available
 * [AT Internet](./atinternet/)
 * [Google Analytics](./googleanalytics/)
+* [Mixpanel](./mixpanel/)
 
 ##Simple events tracking
 
